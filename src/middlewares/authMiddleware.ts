@@ -12,9 +12,9 @@ export function Auth() {
 
 
             if (!req.headers.authorization) {
-                return res.status(401).send("Invalid Token");
+                return res.status(401).send("Please Provide Token");
             }
-
+          
             const decoded: any = jwt.verify(req.headers.authorization, CONFIG.jwt.secret);
 
             let user = await UserService.getByUuid(decoded.uuid);

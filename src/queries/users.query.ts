@@ -30,7 +30,7 @@ export class UserQueries {
 
     public static getByEmail(email: string) {
        
-        let query = `SELECT  uuid as id , name,  email, mobile , created_at , updated_at  FROM ${CONFIG.PG_TABLES.USER} WHERE email = $1 and is_active = $2`;
+        let query = `SELECT  uuid as id , name,  email, mobile , created_at , updated_at ,password  FROM ${CONFIG.PG_TABLES.USER} WHERE email = $1 and is_active = $2`;
 
         return { query, values: [email, true] }
 

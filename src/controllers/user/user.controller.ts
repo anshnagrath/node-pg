@@ -12,7 +12,6 @@ export class UserController {
         let userData: IUser = req.body;
         // Save User
         let newEntry = await UserService.insert(userData);
-
         if (newEntry && !newEntry.id) return res.send(new CustomResponse({  error : true  }, newEntry.message));
 
         return res.send(new CustomResponse({ id : newEntry.id  , error : false }, newEntry.message));

@@ -1,5 +1,7 @@
+import { AuthSchema } from './../../lib/validations/schemas';
 import { Router } from "express";
 import { AuthController } from "../../controllers";
+import { ValidateRequestBody } from "../../lib/validations/validations";
 
 export default class AuthRouter {
     public router: Router;
@@ -12,8 +14,8 @@ export default class AuthRouter {
     public routes(): void {
 
 
-        // POST
-        this.router.post('/login', AuthController.login)
+        // LOGIN (SESSION CREATION)
+        this.router.post('/login',ValidateRequestBody(AuthSchema), AuthController.login)
 
     }
 }

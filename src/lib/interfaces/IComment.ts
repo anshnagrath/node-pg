@@ -1,6 +1,7 @@
 
-export interface IPost {
+export interface IComment {
     id?: number,
+    post_id: string,
     title: string,
     is_active?:boolean,
     user_id: number,

@@ -16,7 +16,7 @@ export const CONFIG = {
 
     // DB Tables
     PG_TABLES: {
-        POST: 'public.post',
+        POST: 'public.posts',
         USER: 'public.users',
         COMMENT : 'public.comments'
      

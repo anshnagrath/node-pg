@@ -14,7 +14,7 @@ export  class UserDao {
 
         try {
             const execQuery = await dbClient.query(query, values);
-            return { error : false , id : execQuery.rows[0]['uuid'] , message : 'ok' };
+            return { error : false , id : execQuery.rows[0]['id'] , message : 'ok' };
         }
         catch ( e ) {
             const message = (e as Error ).message

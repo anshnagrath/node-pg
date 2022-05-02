@@ -25,7 +25,7 @@ uuid  uuid DEFAULT uuid_generate_v4 (),
 user_id integer REFERENCES "users" (id),
 is_active  BOOLEAN  NOT NULL DEFAULT FALSE,
 title TEXT NOT NULL,
-attachments  VARCHAR(100)[],
+attachments  TEXT[],
 created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
     
@@ -40,7 +40,7 @@ post_id integer REFERENCES posts(id),
 is_active   BOOLEAN  NOT NULL DEFAULT FALSE,
 title TEXT NOT NULL,
 user_id integer REFERENCES "users" (id),
-attachments VARCHAR(100)[],
+attachments TEXT[],
 created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 

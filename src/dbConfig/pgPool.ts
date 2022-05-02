@@ -11,7 +11,8 @@ export class PgPool {
         database: process.env.DB_NAME,
         port: parseInt(process.env.DB_PORT!),
         idleTimeoutMillis: 30000,
-        connectionTimeoutMillis: 10000,
+        connectionTimeoutMillis: 10000
+      
 
 
     })

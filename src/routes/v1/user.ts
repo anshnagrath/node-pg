@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { UserController } from "../../controllers";
-import { ValidateRequest } from "../../lib/validations/validations";
+import { ValidateRequestBody } from "../../lib/validations/validations";
 import { NewUserSchema } from "./../../lib/validations/schemas"
 
 export default class UserRouter {
@@ -15,7 +15,7 @@ export default class UserRouter {
 
 
         // CREAT USER
-        this.router.post('/',ValidateRequest(NewUserSchema) , UserController.createUser);
+        this.router.post('/',ValidateRequestBody(NewUserSchema) , UserController.createUser);
 
     }
 }

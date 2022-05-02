@@ -5,6 +5,7 @@ import morgan from "morgan";
 import { CONFIG } from "./environment";
 import clientSession from 'client-sessions';
 import helmet from "helmet";
+import express from "express"
 
 export class Middleware {
     static init(server: IServer) {
@@ -24,6 +25,8 @@ export class Middleware {
         // Helmet
         server.app.use(helmet());
 
-        // intialize passport and other strategis here
+        // Static Server
+        server.app.use('/public', express.static(CONFIG.uploadsFolderPath));
+
     }
 }

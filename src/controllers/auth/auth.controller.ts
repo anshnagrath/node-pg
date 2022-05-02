@@ -22,9 +22,9 @@ export class AuthController {
                 return res.status(400).send(new CustomResponse({}, "Incorrect Password", 400));
             }
 
-            let token = generateJwtTokenByUUID(user.uuid!);
+            let token = generateJwtTokenByUUID(user.id);
 
-            res.send(new CustomResponse({ token: token }, "Login"));
+            res.send(new CustomResponse({ token: token }, "Success"));
         } catch (error) {
             next(error);
         }

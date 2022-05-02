@@ -13,9 +13,9 @@ export class UserController {
         // Save User
         let newEntry = await UserService.insert(userData);
 
-        if (newEntry && !newEntry.uuid) return res.send(new CustomResponse({ ...userData , error : true }, "Error Creating User"));
+        if (newEntry && !newEntry.id) return res.send(new CustomResponse({  error : true  }, newEntry.message));
 
-        return res.send(new CustomResponse({ ...userData , id : newEntry.uuid , error : false }, "Success Email Sent"));
+        return res.send(new CustomResponse({ id : newEntry.id  , error : false }, newEntry.message));
 
 
      }

@@ -1,1 +1,1 @@
-export * from './leads.schema';
+export * from './user.schema';

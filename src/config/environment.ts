@@ -17,7 +17,8 @@ export const CONFIG = {
     // DB Tables
     PG_TABLES: {
         POST: 'public.post',
-        USER: 'public.users'
+        USER: 'public.users',
+        COMMENT : 'public.comments'
      
     },
     jwt: {

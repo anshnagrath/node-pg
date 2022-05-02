@@ -21,7 +21,7 @@ export class UserQueries {
         VALUES  (  
             $1,$2,$3,$4,$5
           
-        ) RETURNING *`;
+        ) RETURNING uuid as id , name , email , mobile `;
 
         return { query, values: [payload.name, payload.email, payload.mobile, true , payload.password ] }
 

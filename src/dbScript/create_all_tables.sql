@@ -3,7 +3,7 @@
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-CREATE TABLE  IF NOT EXISTS "users" (
+CREATE TABLE   "users" (
 
 id serial PRIMARY KEY,
 uuid  uuid DEFAULT uuid_generate_v4 (),
@@ -18,7 +18,7 @@ updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
 
-CREATE TABLE  IF NOT EXISTS posts (
+CREATE TABLE   posts (
 
 id serial PRIMARY KEY,
 uuid  uuid DEFAULT uuid_generate_v4 (),
@@ -32,7 +32,7 @@ updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 
 );
 
-CREATE TABLE  IF NOT EXISTS comments  (
+CREATE TABLE   comments  (
 
 id serial PRIMARY KEY,
 uuid  uuid DEFAULT uuid_generate_v4 (),

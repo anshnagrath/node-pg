@@ -3,3 +3,5 @@ node_modules
 .env
 uploads/
 .data/
+build/
+package-lock.json
